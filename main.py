@@ -15,13 +15,14 @@ if __name__ == '__main__':
                  nnf.DenseLayer(1000, 500), nnf.BatchNormalization(), nnf.ELU(), nnf.DropoutLayer(),
                  nnf.DenseLayer(500, 10), nnf.Softmax()]
     # create the model object
-    Model = Model(STEPS, dataset=Dataset)
+    New_Model = Model(STEPS, dataset=Dataset)
     
      # train the model
-    Model.train(EPOCHS, BATCH_SIZE)
+    New_Model.train(EPOCHS, BATCH_SIZE)
     
     # save the model to the specified file1
-    Model.save_model()
+    New_Model.save_model()
+
 
 
 
